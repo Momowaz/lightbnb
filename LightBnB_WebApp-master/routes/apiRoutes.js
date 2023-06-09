@@ -16,7 +16,7 @@ router.get("/properties", (req, res) => {
 router.get("/reservations", (req, res) => {
   const userId = req.session.userId;
   if (!userId) {
-    return res.send({ error: "error" });
+    return res.send({ error: "error making reservations" });
   }
 
   database
@@ -31,7 +31,7 @@ router.get("/reservations", (req, res) => {
 router.post("/properties", (req, res) => {
   const userId = req.session.userId;
   if (!userId) {
-    return res.send({ error: "error" });
+    return res.send({ error: "error adding properties" });
   }
 
   const newProperty = req.body;
