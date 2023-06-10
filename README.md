@@ -61,3 +61,10 @@
 # 3. visit http://localhost:3000/
 # 4. Register and login to create listing
 
+# To see list of resverations
+# you have to login with an account that has reservation
+
+
+# Screenshots
+![Home page](https://github.com/Momowaz/lightbnb/blob/main/Screenshot/home%20page%20-%20getAllProperties.png)
+![My listing view] (https://github.com/Momowaz/lightbnb/blob/main/Screenshot/My%20listing.png)
