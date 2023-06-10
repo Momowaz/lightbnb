@@ -140,7 +140,16 @@ const getAllProperties = function (options, limit = 10) {
     queryParams.push(options.maximum_price_per_night * 100); // Convert to cents
     queryString += `${whereClause ? 'AND' : 'WHERE'} cost_per_night >= $${queryParams.length - 1} AND cost_per_night <= $${queryParams.length} `;
     whereClause = true;
+  } else if (options.minimum_price_per_night) {
+    queryParams.push(options.minimum_price_per_night * 100); // Convert to cents
+    queryString += `${whereClause ? 'AND' : 'WHERE'} cost_per_night >= $${queryParams.length} `;
+    whereClause = true;
+  } else if (options.maximum_price_per_night) {
+    queryParams.push(options.maximum_price_per_night * 100); // Convert to cents
+    queryString += `${whereClause ? 'AND' : 'WHERE'} cost_per_night <= $${queryParams.length} `;
+    whereClause = true;
   }
+  
 
   if (options.minimum_rating) {
     queryParams.push(options.minimum_rating);
