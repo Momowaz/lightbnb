@@ -67,4 +67,15 @@
 
 # Screenshots
 ![Home page](https://github.com/Momowaz/lightbnb/blob/main/Screenshot/home%20page%20-%20getAllProperties.png)
-![My listing view] (https://github.com/Momowaz/lightbnb/blob/main/Screenshot/My%20listing.png)
+
+![My listing view](https://github.com/Momowaz/lightbnb/blob/main/Screenshot/My%20listing.png)
+
+![My resveration view](https://github.com/Momowaz/lightbnb/blob/main/Screenshot/my%20reservation.png)
+
+![Search for max cost of $2](https://github.com/Momowaz/lightbnb/blob/main/Screenshot/search%20for%20max%20cost%202.png)
+
+![Search result](https://github.com/Momowaz/lightbnb/blob/main/Screenshot/search%20result%20for%20maximum%20cost%202.png)
+
+![Search for min cost of $5](https://github.com/Momowaz/lightbnb/blob/main/Screenshot/search%20for%20minimum%20cost%205.png)
+
+![Search result](https://github.com/Momowaz/lightbnb/blob/main/Screenshot/search%20result%20for%20minimum%20cost%205.png)
