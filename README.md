@@ -53,3 +53,11 @@
 * `routes` contains the router files which are responsible for any HTTP requests to `/users/something` or `/api/something`. 
 * `styles` contains all of the sass files. 
 * `server.js` is the entry point to the application. This connects the routes to the database.
+
+
+# how to run the program
+# 1. cd LightBnB_WebApp-master
+# 2. npm start
+# 3. visit http://localhost:3000/
+# 4. Register and login to create listing
+

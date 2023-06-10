@@ -33,8 +33,6 @@ router.post("/login", (req, res) => {
     if (!bcrypt.compareSync(password, user.password)) {
       return res.send({ error: "error" });
     }
-    console.log('user id from userRoutes ', user.id);
-    console.log('user ', user);
     req.session.userId = user.id;
     res.send({
       user: {

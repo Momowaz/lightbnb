@@ -1,5 +1,3 @@
-const properties = require("./json/properties.json");
-const users = require("./json/users.json");
 const { Pool } = require('pg');
 
 const pool = new Pool({
@@ -37,7 +35,6 @@ const getUserWithEmail = (email) => {
  * @return {Promise<{}>} A promise to the user.
  */
 
-
 const getUserWithId = (id) => {
   return pool
     .query('SELECT name, email FROM users WHERE id = $1', [id])
@@ -54,13 +51,11 @@ const getUserWithId = (id) => {
     });
 };
 
-
 /**
  * Add a new user to the database.
  * @param {{name: string, password: string, email: string}} user
  * @return {Promise<{}>} A promise to the user.
  */
-
 
 const addUser = (user) => {
   const { name, email, password } = user;
@@ -71,15 +66,12 @@ const addUser = (user) => {
     .query(query, values)
     .then((result) => {
       const newUser = result.rows[0];
-
-      console.log('add newUser', newUser);
       return newUser;
     })
     .catch((err) => {
       console.log(err.message);
     });
 };
-
 
 /// Reservations
 
@@ -112,7 +104,6 @@ const getAllReservations = function (guest_id, limit = 10) {
       console.log(err.message);
     });
 };
-
 
 /// Properties
 
@@ -162,8 +153,6 @@ const getAllProperties = function (options, limit = 10) {
     ORDER BY cost_per_night
     LIMIT $${queryParams.length};
   `;
-
-  console.log(queryString, queryParams);
 
   return pool.query(queryString, queryParams).then((res) => res.rows);
 };
@@ -221,7 +210,6 @@ const addProperty = function (property) {
       console.log(err.message);
     });
 };
-
 
 module.exports = {
   getUserWithEmail,
