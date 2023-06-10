@@ -198,7 +198,7 @@ const addProperty = function (property) {
     property.description,
     property.thumbnail_photo_url,
     property.cover_photo_url,
-    property.cost_per_night,
+    property.cost_per_night * 100, // Convert to cents
     property.street,
     property.city,
     property.province,
@@ -219,6 +219,7 @@ const addProperty = function (property) {
       console.log(err.message);
     });
 };
+
 
 module.exports = {
   getUserWithEmail,
