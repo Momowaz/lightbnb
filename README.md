@@ -55,14 +55,14 @@
 * `server.js` is the entry point to the application. This connects the routes to the database.
 
 
-# how to run the program
-# 1. cd LightBnB_WebApp-master
-# 2. npm start
-# 3. visit http://localhost:3000/
-# 4. Register and login to create listing
+* how to run the program
+* 1. cd LightBnB_WebApp-master
+* 2. npm start
+* 3. visit http://localhost:3000/
+* 4. Register and login to create listing
 
-# To see list of resverations
-# you have to login with an account that has reservation
+* To see list of resverations
+* you have to login with an account that has reservation
 
 
 # Screenshots
