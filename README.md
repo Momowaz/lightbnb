@@ -58,11 +58,11 @@
 
 # Installation
   * To install and run [Project Name], follow these steps:
-  ('git clone https://github.com/your-username/project-name.git')
+  ``` git clone https://github.com/your-username/project-name.git ```
   * Navigate to the project directory:
-  ('cd LightBnB_WebApp-master')
+  ``` cd LightBnB_WebApp-master ```
   * Install the dependencies:
-  ('npm install')
+  ``` npm install ```
   * visit http://localhost:3000/
   * Register and login to create listing
 
@@ -71,7 +71,7 @@
 
 # Database Setup
 * Run seed 
-  ('npx knex seed:run')
+  ``` npx knex seed:run ```
 
 # Dependencies
 The following dependencies are required for [Project Name]:
