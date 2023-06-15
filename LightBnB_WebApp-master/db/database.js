@@ -128,6 +128,7 @@ const getAllProperties = function (options, limit = 10) {
   if (options.city) {
     queryParams.push(`%${options.city}%`);
     queryString += `WHERE city LIKE $${queryParams.length} `;
+    whereClause = true;
   }
 
   if (options.owner_id) {
@@ -150,20 +151,19 @@ const getAllProperties = function (options, limit = 10) {
     queryString += `${whereClause ? 'AND' : 'WHERE'} cost_per_night <= $${queryParams.length} `;
     whereClause = true;
   }
-  
+  queryString += `
+    GROUP BY properties.id`;
 
   if (options.minimum_rating) {
     queryParams.push(options.minimum_rating);
-    queryString += `${whereClause ? 'AND' : 'WHERE'} property_reviews.rating >= $${queryParams.length} `;
+    queryString += ` HAVING avg(property_reviews.rating) >= $${queryParams.length} `;
   }
 
   queryParams.push(limit);
   queryString += `
-    GROUP BY properties.id
     ORDER BY cost_per_night
     LIMIT $${queryParams.length};
   `;
-
   return pool.query(queryString, queryParams).then((res) => res.rows);
 };
 
