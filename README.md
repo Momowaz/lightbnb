@@ -55,14 +55,33 @@
 * `server.js` is the entry point to the application. This connects the routes to the database.
 
 
-* how to run the program
-* 1. cd LightBnB_WebApp-master
-* 2. npm start
-* 3. visit http://localhost:3000/
-* 4. Register and login to create listing
+
+# Installation
+  * To install and run [Project Name], follow these steps:
+  ('git clone https://github.com/your-username/project-name.git')
+  * Navigate to the project directory:
+  ('cd LightBnB_WebApp-master')
+  * Install the dependencies:
+  ('npm install')
+  * visit http://localhost:3000/
+  * Register and login to create listing
 
 * To see list of resverations
 * you have to login with an account that has reservation
+
+# Database Setup
+* Run seed 
+  ('npx knex seed:run')
+
+# Dependencies
+The following dependencies are required for [Project Name]:
+
+* bcrypt: ^3.0.6
+* cookie-session: ^1.3.3
+* express: ^4.17.1
+* nodemon: ^1.19.1
+* pg: ^8.11.0
+Make sure to install these dependencies by running npm install.
 
 
 # Screenshots
